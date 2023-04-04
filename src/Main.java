@@ -1,6 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.Scanner;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.Random;
+
 
 public class Main {
     private void playGame(){
