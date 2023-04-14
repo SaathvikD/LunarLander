@@ -25,6 +25,20 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         while(valid){
 
+            panel.repaint();
+            String inp = keyboard.next();
+            if(inp.equals("a")){
+                BackgroundRunner.left(panel);
+            }
+            else if(inp.equals("d")){
+                BackgroundRunner.right(panel);
+            }
+            else if(inp.equals("s")){
+                BackgroundRunner.down(panel);
+            }
+            else if(inp.equals("w")){
+                BackgroundRunner.up(panel);
+            }
         }
         System.out.println("Congratulations, you finished with a final score of " + finalScore + "!");
     }

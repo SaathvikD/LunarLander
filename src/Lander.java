@@ -10,7 +10,7 @@ public class Lander {
         x = 100;
         y = 100;
         vSpeed = -2;
-        hSpeed = 0;
+        hSpeed = 2;
         score = 1000;
         dx=0;
         dy=0;
@@ -25,11 +25,17 @@ public class Lander {
         x += vx;
         y += vy;
     }
+    public void AHS(int a){
+        hSpeed += a;
+    }
+    public void AVS(int a){
+        vSpeed += a;
+    }
     public int getX(){
-        return x;
+        return this.x;
     }
     public int getY(){
-        return y;
+        return this.y;
     }
     public void keyPressed(KeyEvent e){
         int key = e.getKeyCode();

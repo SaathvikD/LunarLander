@@ -31,58 +31,34 @@ public class BackgroundRunner extends JPanel {
 	public static void main(String[] args) throws InterruptedException {
 
 	}
-	public static void left(BackgroundRunner panel, int goalx, int goaly){
-
-		while (panel.red.getX() != goalx) {
-			if(panel.red.getX() == 525){
-				panel.red.move(0,50);
-			}
-			if(panel.red.getX() < goalx){
-				panel.red.move(1, 0);
-			}
-			if(panel.red.getX() > goalx){
-				panel.red.move(-1, 0);
-			}
+	public static void left(BackgroundRunner panel){
+			panel.red.move(-10,0);
 			panel.repaint();
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-		while (panel.red.getY() != goaly) {
-			if(panel.red.getY() < goaly){
-				panel.red.move(0, 1);
-			}
-			if(panel.red.getY() > goaly){
-				panel.red.move(0, -1);
-			}
-			panel.repaint();
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-		/*while (panel.blue.getx() > 32) {
-			panel.blue.move(-1, 0);
-			panel.repaint();
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-		while (panel.blue.gety() < 525) {
-			panel.blue.move(0, 1);
-			panel.repaint();
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}*/
 	}
+	public static void right(BackgroundRunner panel){
+			panel.red.move(10,0);
+			panel.repaint();
+	}
+	public static void up(BackgroundRunner panel){
+			panel.red.move(0,-10);
+			panel.repaint();
+	}
+	public static void down(BackgroundRunner panel){
+			panel.red.move(0,10);
+			panel.repaint();
+	}
+
+	/*public static void down(BackgroundRunner panel, int goaly){
+		while(panel.red.getX() != goaly){
+			panel.red.move(0,10);
+			panel.repaint();
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}*/
 	private void drawImage( Graphics window){
 		Image img2 = Toolkit.getDefaultToolkit().getImage("Board Layout.jpg"); /*the image cannot be in the SRC folder*/
 		window.drawImage(img2, 0, 0, 600, 600 , this);
