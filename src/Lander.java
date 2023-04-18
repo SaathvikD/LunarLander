@@ -1,5 +1,7 @@
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.lang.Object;
+import java.awt.Color;
 
 public class Lander {
     int fuel,damage,x,y,vSpeed,hSpeed,score,dx,dy;
@@ -18,8 +20,10 @@ public class Lander {
     }
     public void draw(Graphics g) {
         g.drawRect(x, y, 15, 25);
-        g.fillRect(x, y, 15, 25);
         g.setColor(Color.WHITE);
+        g.fillRect(x, y, 15, 25);
+        g.drawString("Score:" + score + " X - Value " + x + " Y - Value " + y, 150, 150);
+
     }
     public void move(int vx, int vy) {
         x += vx;

@@ -32,20 +32,20 @@ public class BackgroundRunner extends JPanel {
 
 	}
 	public static void left(BackgroundRunner panel){
-			panel.red.move(-10,0);
-			panel.repaint();
+		panel.red.move(-10,0);
+		panel.repaint();
 	}
 	public static void right(BackgroundRunner panel){
-			panel.red.move(10,0);
-			panel.repaint();
+		panel.red.move(10,0);
+		panel.repaint();
 	}
 	public static void up(BackgroundRunner panel){
-			panel.red.move(0,-10);
-			panel.repaint();
+		panel.red.move(0,-10);
+		panel.repaint();
 	}
 	public static void down(BackgroundRunner panel){
-			panel.red.move(0,10);
-			panel.repaint();
+		panel.red.move(0,10);
+		panel.repaint();
 	}
 
 	/*public static void down(BackgroundRunner panel, int goaly){
@@ -66,7 +66,6 @@ public class BackgroundRunner extends JPanel {
 }
 
 //			panel.drawImage(frame.getGraphics());
-
 
 
 
